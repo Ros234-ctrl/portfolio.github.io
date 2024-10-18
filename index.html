@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="stylep.css">
+   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+   <script src="script.js"></script>
+    <script src="http://code.jquery.com/jquery-1.6.2.min.js">
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<div style="position: absolute;" class="flip-container" id="flipContainer">
+  <div style="position: absolute;" class="flipper">
+      <div class="front">
+  <img id="myimg" style="height: 180px; border: 1px solid white; width: 180px;  position: absolute; transform: translate(640px,120px); outline: #dee4ea 2px 2px;  box-shadow: 0 0 10px rgba(20, 20, 20, 0.400);box-sizing: border-box; border-radius: 50%;" src="myimg.jpg" alt="">
+</div>
+<div style="position: absolute;" class="back">
+  <img style="position: absolute;height: 180px;outline: #dee4ea 2px 2px;  box-shadow: 0 0 10px rgba(20, 20, 20, 0.400);box-sizing: border-box; border-radius: 50%; width: 180px; transform: translate(640px,200px);" src="myimg.jpg" width="320" height="200" alt="Back Image">
+</div>
+</div>
+</div>
+<script>
+  const flipContainer = document.getElementById('flipContainer');
+  let flipped = false;
+
+  function flipImage() {
+      flipped = !flipped;
+      const flipper = flipContainer.querySelector('.flipper');
+      flipper.style.transform = flipped ? 'rotateY(1440deg)' : 'rotateY(0deg)';
+  }
+
+  setInterval(flipImage, 4000); // Flip every 3 seconds
+</script>
+<style>
+  .flip-container {
+      perspective: 9000px;
+      width: 320px;
+      height: 200px;
+      position: absolute;
+
+  }
+
+  .flipper {
+    position: relative;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.2s;
+      transform-style: preserve-3d;
+  }
+
+  .front, .back {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+  }
+
+  .front {
+      z-index: 20;
+      position: absolute;
+      transform: rotateY(0deg);
+  }
+
+  .back {
+      transform: rotateY(180deg);
+      position: absolute;
+  }
+</style>
+<ul class="menu" style="display: flex; gap: 30px; list-style: none;
+
+
+color: rgb(238, 244, 244); margin-top: 25px; position: absolute; left: 40px;  font-family: 'Open Sans', serif; font-weight: 580; ">
+ <i  style="position: absolute; cursor: pointer; margin-left: -20px; font-size:13px;top: 1px; min-width: 200px; " class="fas fa-briefcase">
+  <li class="first"  style="font-weight: 600;  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-seri; filter: drop-shadow(rgb(0, 183, 255) 1px 1px); background-color: rgba(0, 255, 255, 0.010); box-sizing: border-box; height: 25px; border-radius: 5px; ">
+    MY PORTFOLIO </i>
+</li>
+
+<a  href="#about_section"  id="btn" style="transform: translateX(350px);
+ text-decoration: none; color: aliceblue;   
+
+font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-weight: 400; ">
+ABOUT </a>
+
+<a href="#education_section"  id="btn"    style="transform: translateX(350px);
+ text-decoration: none; color: aliceblue; font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;font-weight: 500;">
+  EDUCATION
+</a>
+
+<a  href="#skill_section" id="btn"  style="transform: translateX(350px); 
+ text-decoration: none; color: aliceblue; font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-weight: 400;">
+SKILLS 
+</a>
+
+<a   href="#contact_section" id="btn"   style="transform: translateX(350px); text-decoration: none; color: aliceblue; font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-weight: 400;">
+ CONTACT
+</a>
+
+  <a  href="http://wa.me/918294569486"  style="transform: translate(1000px,2px); position: absolute; text-decoration: none; color: white; font-weight: 400; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;" >
+    <i   style="color: 	#026426; font-weight: 600; filter:saturate(2)" class="fa-brands fa-whatsapp"></i>
+    Let,s talk 
+  </a>
+</ul>
+
+
+<body style=" background: linear-gradient(107deg, rgb(3, 96, 196) 27.4%, rgb(1, 196, 196) 92.7%); margin: 0;">
+
+    <div  id="social">
+    <a style="color: black;" href=""><i class="fa-brands fa-linkedin"></i></a>
+    <a  href="https://www.instagram.com/_roshan_kerketta/" style="color: black;" href=""><i class="fa-brands fa-instagram"></i></a>
+      <a href="https://github.com/Ros234-ctrl/Asus" style="color: black;" href=""><i class="fa-brands fa-github"></i></a>
+        <a    href="https://www.facebook.com/jaydan.mathew/" style="color: black;" href=""><i class="fa-brands fa-facebook"></i></a>
+</div>
+
+ 
+
+ <section  >
+
+ <p   style="color:black;font-family: Arial, Helvetica, sans-serif;cursor: pointer; font-size: 14;  font-weight: 550; transform: translate(400px,760px);  position: absolute;"> MY SKILLS</p>
+<ul id="skill_section"  style="color:black;font-size: 14px;  font-family: Arial, Helvetica, sans-serif;cursor: pointer;   transform: translate(110px,800px); position: absolute; "><li> HTML: Proficient in structuring web content with semantic HTML elements,<br> ensuring accessibility and SEO-friendly markup languages. <br> <br></li>
+ <li> CSS: responsive designs using CSS, Flexbox, and Grid. Familiar with CSS preprocessors<br></li><br>
+  <li>JavaScript: Beginner in developing interactive features using JavaScript, elements <br> as well as libraries and frameworks.    </p></li>
+</ul>
+</section>
+<style>
+    #social i  {
+
+transform: translate(160px,580px);
+margin-right: 15px;
+font-size:30px;
+    }
+#home_section{
+  scroll-behavior: smooth;
+}
+
+</style>
+<section id="about_section" style="scroll-behavior: smooth;" >
+    <a href="#section1"><p style="transform: translate(150px,180px) ;cursor: pointer; position: absolute; "></a>
+        Hello! I,am Roshan 
+
+    </p>
+    <p  style="transform: translate(150px,220px);cursor: pointer;">
+        I, am a  student and Beginner Web Developer 
+
+    </p>
+    <p  style="transform: translate(150px,220px);cursor: pointer; ">
+        I am currently studing at University of 
+         polytechninc bit mesra<br> in compter engeenering .   
+        sometimes have the motivation to learn  <br>,explore improve new skills. 
+       I hope to develop 
+        further in the future <br> to gain real world  work experience  in web developemnet. <br>
+        <br>
+        In addition to my technical skills, I am passionate about
+       Music and things related to music <br>I'm always eager to take on new challenges, learn  from others, and contribute <br>
+           to exciting projects. 
+
+
+    </p>
+  </section>
+    <a id="hir" href="#contact_section" style="transform: translate(150px,250px); text-decoration: none; height: 25px; text-align: center; font-family: 'Times New Roman', Times, serif; padding-top: 2px; color: white; width:60px; border-radius: 10px; border: 1px solid rgba(0, 0, 0, 0.72); border-radius: 10px; box-shadow: 0 0 10px rgba(20, 20, 20, 0.400); background: linear-gradient(107deg, rgb(2, 108, 223) 27.4%, rgb(0, 255, 255) 92.7%); height: 20px; outline-color: black; position: absolute;" href=""> Hire me</a>
+    <a id="dnload"  style="transform: translate(230px,250px); text-decoration: none; height: 20px; width: 100px; border-radius: 10px; border: 1px solid rgba(0, 0, 0, 0.72);
+    outline-style:initial; font-size: 15px; padding-left: 10px;  background: linear-gradient(107deg, rgb(2, 108, 223) 27.4%, rgb(0, 255, 255) 92.7%); color: white;
+    visibility: visible; position: absolute;"href="c:\Users\Asus\OneDrive\Documents\realme\Download\Resume. (1).docx (1).docx"> Download CV</a>
+
+
+    <div id="backgrnd" style="height: 1200px; width: 800px;    
+    background-color: #ecf0f1ef; z-index: 10px;
+     box-shadow: 0 0 10px rgba(243, 243, 243, 0.450); 
+  
+    box-sizing: border-box;border-radius:10px; margin-left: 80px; margin-top: -100px;">
+       
+    </div>
+
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+
+      #go{
+          font-family: 'Open Sans', serif;
+          
+      }
+      .first{
+        font-family: 'Open Sans', serif;
+        
+      }
+  </style>
+       
+       <a style="position: absolute; text-decoration: none;transform: translate(1010px,-1150px);color:#00246B  ; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;font-weight: 600; font-size: 20px; " href="">  DESIGNED BY</a>
+       
+<a href=""><div style="height: 50px;width: 200px; position: absolute;   transform: translate(980px,-1100px); background-color: rgba(15, 159, 215, 0.912); box-sizing: border-box; border-radius: 20px;"></div></a>
+   
+<i style="position: absolute;  transform: translate( 980px,-995px); z-index: 10;" class="fa-solid fa-check"></i>
+<i style="position: absolute; transform: translate( 980px,-945px);z-index: 10; " class="fa-solid fa-check"></i>
+<i style="position: absolute; transform: translate( 980px,-895px); z-index: 10;" class="fa-solid fa-check"></i>
+<i style="position: absolute; transform: translate( 980px,-845px);z-index: 10;" class="fa-solid fa-check"></i>
+
+<img style="position: ab
+solute; transform: translate(980px,-1100px); cursor: pointer; box-sizing: border-box; border-radius: 10px; height: 50px;width: 50px; " src="images.png" alt="">
+<img style="position: absolute; transform: translate(1000px,-1100px);cursor: pointer; box-sizing: border-box; border-radius: 10px;  height: 50px;width: 50px;"  src="images (1).jfif" alt="">
+<img style="position: absolute; transform: translate(1070px,-1100px);cursor: pointer;  box-sizing: border-box; border-radius: 10px;  height: 50px;width: 50px;"  src="images (1).png" alt="">
+<div style="position: absolute; margin-top: -50px; transform: translate(1px,-200px);">
+      <a href=""><div style="height:40px ; float: right; height: 40px;box-sizing: border-box; border-radius: 10px;  width: 40px; position: absolute;  transform: translate(965px,-810px); width: 40px;box-sizing: border-box;border-radius: 50%; z-index: -10;
+       background: linear-gradient(107deg, rgb(2, 108, 223) 27.4%, rgb(0, 255, 255) 92.7%);"></div></a>
+      <a style="text-decoration: none; 
+      
+      " href=""><p style="transform: translate(1020px,-815px);  text-decoration: none;  position: relative; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;color:#031d52"">
+        Built with no framework
+      </p></a>
+      <div style="height:40px ; float: right;  transform: translate(965px,-810px);background: linear-gradient(107deg, rgb(2, 108, 223) 27.4%, rgb(0, 255, 255) 92.7%); width: 40px;box-sizing: border-box;border-radius: 50%; position: absolute; z-index:-10"></div>
+      <a style="text-decoration: none; color:#031d52" href=""><p  style="transform: translate(1020px,-800px);position: relative ; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">
+     HTML,CSS,Javascript only
+      </p>
+      <div style="height:40px ; float: right;  transform: translate(965px,-795px);width: 40px;box-sizing: border-box;border-radius: 50%;  position: absolute; background: linear-gradient(107deg, rgb(2, 108, 223) 27.4%, rgb(0, 255, 255) 92.7%);z-index:-10"></div>
+      <a style="text-decoration: none; color:#031d52" href=""><p  style="transform: translate(1020px,-785px);  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">
+        Simply portfolio website
+      </p  style="transform: translate(920px,-100px);"></a>
+      <div style="height:40px ; float: right;  transform: translate(965px,-779px);width: 40px;box-sizing: border-box;border-radius: 50%; z-index: 10; position: absolute; background: linear-gradient(107deg, rgb(2, 108, 223) 27.4%, rgb(0, 255, 255) 92.7%);z-index:-10"></div>
+     <a style="text-decoration: none; color: #031d52" href=""> <p  style="transform: translate(1020px,-770px); font-family: sans-serif; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">
+        Free website Templates
+      </p></a>
+      <div style="height:40px ; float: right;  transform: translate(968px,-765px);width: 40px;box-sizing: border-box;border-radius: 50%; position: absolute; background: linear-gradient(107deg, rgb(2, 108, 223) 27.4%, rgb(0, 255, 255) 92.7%);z-index:-10"></div>
+      <a   <i style="position: absolute; text-decoration: none; color: #031d52;  transform: translate( 980px,-755px);" class="fa-solid fa-check"
+        style="text-decoration: none;   color: #031d52" href=""> <p  style="transform: translate(40px,-35px);  width: 150px; font-weight: 200;
+       position: absolute; color: #031d52;  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">
+         One Page website
+       </p></a>
+      </div>
+
+ <p  id="education_section" style="transform: translate(400px,-800px); ; position: absolute; 
+      text-decoration: none; color: black; font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;font-weight: 600;">
+    
+       EDUCATION
+
+       <div   class="education-item">
+        <h3>Diploma in Computer engeenering</h3>
+        <p><strong>Institution:</strong> University of Polytechnic Bit Mesra</p>
+        <p><strong>Location:</strong> Ranchi,Jharkhand</p>
+        <p><strong>Relevant Coursework:</strong> web developemnet course </p>
+        <p><strong>Achievements:</strong>Certificate of web development from mindluster.com</p>
+     
+    </div>
+  </p>
+
+  <p   style="color:black;font-family: Arial, Helvetica, sans-serif;cursor: pointer; font-size: 14;  font-weight: 550; transform: translate(400px,-440px);  position: absolute;"> MY PROJECTS</p>
+<ul id="my_project"  style="position: absolute; transform: translate(120px,-380px); font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-size: 14px; ">
+
+  <li style="margin-bottom: 10px;" >Hospital Management system</li>
+  <li style="margin-bottom: 10px;" >Hotel Management sytem</li>
+  <li style="margin-bottom: 10px;" >My portfolio</li>
+  <li style="margin-bottom: 10px;" >College Management sytem</li>
+</ul>
+ <style>
+       .education-item{
+transform: translate(130px,-620px);
+        font-family: Arial, sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+          margin-top: -140px;
+       }
+    h1 {
+      text-align: center;
+  }
+  .education {
+      margin-top: 30px;
+  }
+  .education h2 {
+      border-bottom: 2px solid #007BFF;
+      padding-bottom: 5px;
+      margin-bottom: 20px;
+  }
+  .education-item {
+      margin-bottom: 20px;
+  }
+  .education-item h3 {
+      margin: 0;
+      font-size: 14px;
+      color: #0e0d0d;
+  }
+  .education-item p {
+      margin: 5px 0;
+      font-size: 14px;
+      color: #111010;
+  }
+</style>
+<!-- Footer -->
+
+<footer id="contact_section">
+  <div class="footer-container">
+      <div class="footer-section">
+          <h3>Contact</h3>
+          <p style="cursor: pointer;">Email: znmdrs@gmail.com</p>
+          <p style="cursor: pointer;">Phone: +91 8294569486</p>
+      </div>
+  
+      <div class="footer-section">
+          <h3 style="display: flex;">Quick Links</h3>
+          <ul style="display: flex; gap: 20px;">
+              <li><a href="http://127.0.0.1:5500/portfolio.html">Home</a></li>
+              <li><a href="#about_section">About</a></li>
+              <li><a href="#my_project">Projects</a></li>
+              <li ><a href="#contact_section">Contact</a></li>
+          </ul>
+      </div>
+  </div>
+  <div class="footer-bottom">
+      <p style="cursor: pointer;">&copy; 2024 Roshan kerketta. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>
+
+
